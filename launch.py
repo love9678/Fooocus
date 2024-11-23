@@ -47,7 +47,7 @@ def prepare_environment():
                 else:
                     print("Installation of xformers is not supported in this version of Python.")
                     print(
-                        "You can also check this and build manually: https://github.com/AUTOMATIC1111/stable-diffusion-webui/wiki/Xformers#building-xformers-on-windows-by-duckness")
+                        "You can also check this and build manually: https://gitee.com/loves9661/stable-diffusion-webui/wikis/Xformers#building-xformers-on-windows-by-duckness")
                     if not is_installed("xformers"):
                         exit(0)
             elif platform.system() == "Linux":
@@ -60,10 +60,10 @@ def prepare_environment():
 
 
 vae_approx_filenames = [
-    ('xlvaeapp.pth', 'https://huggingface.co/lllyasviel/misc/resolve/main/xlvaeapp.pth'),
-    ('vaeapp_sd15.pth', 'https://huggingface.co/lllyasviel/misc/resolve/main/vaeapp_sd15.pt'),
+    ('xlvaeapp.pth', 'https://hf-mirror.com/lllyasviel/misc/resolve/main/xlvaeapp.pth?download=true'),
+    ('vaeapp_sd15.pth', 'https://hf-mirror.com/lllyasviel/misc/resolve/main/vaeapp_sd15.pt?download=true'),
     ('xl-to-v1_interposer-v4.0.safetensors',
-     'https://huggingface.co/mashb1t/misc/resolve/main/xl-to-v1_interposer-v4.0.safetensors')
+     'https://huggingface.co/mashb1t/misc/resolve/main/xl-to-v1_interposer-v4.0.safetensors?download=true')
 ]
 
 
@@ -107,7 +107,7 @@ def download_models(default_model, previous_default_models, checkpoint_downloads
         load_file_from_url(url=url, model_dir=config.path_vae_approx, file_name=file_name)
 
     load_file_from_url(
-        url='https://huggingface.co/lllyasviel/misc/resolve/main/fooocus_expansion.bin',
+        url='https://hf-mirror.com/lllyasviel/misc/resolve/main/fooocus_expansion.bin?download=true',
         model_dir=config.path_fooocus_expansion,
         file_name='pytorch_model.bin'
     )
